@@ -1,6 +1,7 @@
 TODO LIST
 ---------
--Kodovani znaku
+-Character encoding
 -CR/LF/CRLF
--Useky
+-Line wrap
+-Segment reading words/sentences/part os sentences/lines
 -Java/C++ indexer
