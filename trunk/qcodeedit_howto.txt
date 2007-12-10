@@ -1,0 +1,4 @@
+qcodecompleter.cpp -comment destructor
+TEMPLATE = app
+CONFIG += qnfa static release
+SOURCES += ***

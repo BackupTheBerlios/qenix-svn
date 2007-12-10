@@ -1,0 +1,63 @@
+[Config]
+Relative path=1
+Compilator.FileName=g++
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.LogType=0
+DefaultDir=E:\projekty\mdi
+DefaultCPIndex=7
+LogtoEnd=1
+DontOpen=0
+FileFormat=1
+[Project tree]
+QeniX
+	+genereal
+		..\qenix.pro
+	+TTSCPW
+		+Sources
+			..\libttscpw\main.cpp
+			..\libttscpw\ttscpw.cpp
+			..\libttscpw\rawaudio.cpp
+		+Headers
+			..\libttscpw\ttscpw.h
+			..\libttscpw\rawaudio.h
+	+Qenix
+		+Headers
+			textformater.h
+			ttscpvoice.h
+			ttscpsettings.h
+			find.h
+			mainwindow.h
+			codeedit.h
+			tabwidget.h
+		+Sources
+			find.cpp
+			ttscpvoice.cpp
+			ttscpsettings.cpp
+			textformater.cpp
+			mainwindow.cpp
+			main.cpp
+			codeedit.cpp
+			tabwidget.cpp
+	+Iniparser
+		+headers
+			strlib.h
+			dictionary.h
+			iniparser.h
+		+sources
+			iniparser.cpp
+			strlib.cpp
+			dictionary.cpp
+[Open project files]
+0=mainwindow.h
+1=mainwindow.cpp
+[Selected Project Files]
+Main=
+Selected=mainwindow.cpp
+[mainwindow.h]
+TopLine=70
+Caret=1,94
+[mainwindow.cpp]
+TopLine=148
+Caret=3,174
