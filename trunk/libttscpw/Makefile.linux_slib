@@ -1,0 +1,7 @@
+ttscp: ttscpw.o oss.o
+	ar rcs libttscpw.a ttscpw.o oss.o
+ttscpw.o: ttscpw.cpp
+	g++ -c ttscpw.cpp		
+oss.o: oss.cpp
+	g++ -c oss.cpp
+		

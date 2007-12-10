@@ -1,0 +1,11 @@
+ttscp: main.o ttscpw.o oss.o
+	g++ -lpthread -o ttscp main.o ttscpw.o oss.o 
+main.o: main.cpp
+	g++ -c main.cpp
+ttscpw.o: ttscpw.cpp
+	g++ -c ttscpw.cpp		
+oss.o: oss.cpp
+	g++ -c oss.cpp
+
+
+		

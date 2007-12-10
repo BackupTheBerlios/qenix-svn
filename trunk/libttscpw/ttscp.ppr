@@ -1,0 +1,39 @@
+[Config]
+Relative path=1
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+FileFormat=1
+[Project tree]
+ttscp
+	+Header
+		ttscpw.h
+		rawaudio.h
+		platform.h
+	+Sources
+		main.cpp
+		rawaudio.cpp
+		ttscpw.cpp
+[Open project files]
+0=rawaudio.h
+1=main.cpp
+2=ttscpw.h
+3=ttscpw.cpp
+[Selected Project Files]
+Main=
+Selected=ttscpw.cpp
+[rawaudio.h]
+TopLine=1
+Caret=1,1
+[main.cpp]
+TopLine=1
+Caret=1,1
+[ttscpw.h]
+TopLine=59
+Caret=1,94
+[ttscpw.cpp]
+TopLine=727
+Caret=27,454

@@ -1,0 +1,11 @@
+ttscp: ttscpw.o oss.o
+	g++ -shared -Wl,-soname,libttscpw.so.1 -o libttscpw.so.1.0.1 ttscpw.o oss.o -lpthread
+main.o: main.cpp
+	g++ -fPIC -c main.cpp
+ttscpw.o: ttscpw.cpp
+	g++ -fPIC -c ttscpw.cpp		
+oss.o: oss.cpp
+	g++ -fPIC -c oss.cpp
+
+
+		

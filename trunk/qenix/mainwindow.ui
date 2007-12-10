@@ -1,0 +1,321 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>QENIX</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mnuFile" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actNewDoc" />
+    <addaction name="actOpen" />
+    <addaction name="actSave" />
+    <addaction name="actSaveAs" />
+    <addaction name="separator" />
+    <addaction name="actSwitchLD" />
+    <addaction name="separator" />
+    <addaction name="actExit" />
+   </widget>
+   <widget class="QMenu" name="mnuEdit" >
+    <property name="title" >
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actUndo" />
+    <addaction name="actRedo" />
+    <addaction name="separator" />
+    <addaction name="actCut" />
+    <addaction name="actCopy" />
+    <addaction name="actPaste" />
+    <addaction name="actQuickReplace" />
+    <addaction name="separator" />
+    <addaction name="actFind" />
+    <addaction name="actFindNext" />
+   </widget>
+   <widget class="QMenu" name="mnuTTSCP" >
+    <property name="title" >
+     <string>&amp;TTSCP</string>
+    </property>
+    <addaction name="actServer" />
+    <addaction name="actVoice" />
+   </widget>
+   <widget class="QMenu" name="mnuFormat" >
+    <property name="title" >
+     <string>&amp;Format</string>
+    </property>
+    <addaction name="actFont" />
+   </widget>
+   <widget class="QMenu" name="mnuRead" >
+    <property name="title" >
+     <string>&amp;Read</string>
+    </property>
+    <addaction name="actReadAll" />
+    <addaction name="actReadSelected" />
+    <addaction name="actStopReading" />
+    <addaction name="separator" />
+   </widget>
+   <widget class="QMenu" name="mnuHelp" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actAbout" />
+    <addaction name="actAboutQt" />
+   </widget>
+   <addaction name="mnuFile" />
+   <addaction name="mnuEdit" />
+   <addaction name="mnuFormat" />
+   <addaction name="mnuTTSCP" />
+   <addaction name="mnuRead" />
+   <addaction name="mnuHelp" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <widget class="QToolBar" name="toolBar" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actNewDoc" />
+   <addaction name="actOpen" />
+   <addaction name="actSave" />
+   <addaction name="actSaveAs" />
+   <addaction name="separator" />
+   <addaction name="actUndo" />
+   <addaction name="actRedo" />
+   <addaction name="separator" />
+   <addaction name="actFind" />
+   <addaction name="separator" />
+   <addaction name="actCut" />
+   <addaction name="actCopy" />
+   <addaction name="actPaste" />
+   <addaction name="actQuickReplace" />
+   <addaction name="separator" />
+   <addaction name="actReadAll" />
+   <addaction name="actReadSelected" />
+   <addaction name="actStopReading" />
+  </widget>
+  <action name="actNewDoc" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/tab-new.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actOpen" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/document-open.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="actSave" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/document-save.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSaveAs" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/document-save-as.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Save As...</string>
+   </property>
+  </action>
+  <action name="actSwitchLD" >
+   <property name="text" >
+    <string>Switch layout direction</string>
+   </property>
+  </action>
+  <action name="actExit" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/system-log-out.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>E&amp;xit</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actCut" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-cut.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Cut</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actCopy" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-copy.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Copy</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actPaste" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-paste.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Paste</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actQuickReplace" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/go-jump.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Quick replace</string>
+   </property>
+  </action>
+  <action name="actFind" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-find.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Find...</string>
+   </property>
+  </action>
+  <action name="actFindNext" >
+   <property name="text" >
+    <string>Find &amp;next...</string>
+   </property>
+  </action>
+  <action name="actServer" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/device/images/tango-icon.theme-0.8.1/scalable/devices/network-wired.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Server...</string>
+   </property>
+  </action>
+  <action name="actVoice" >
+   <property name="text" >
+    <string>Voice...</string>
+   </property>
+  </action>
+  <action name="actFont" >
+   <property name="text" >
+    <string>&amp;Font...</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actAbout" >
+   <property name="text" >
+    <string>&amp;About...</string>
+   </property>
+  </action>
+  <action name="actAboutQt" >
+   <property name="text" >
+    <string>&amp;About Qt...</string>
+   </property>
+  </action>
+  <action name="actReadAll" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/status/images/tango-icon.theme-0.8.1/scalable/status/audio-volume-high.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Read &amp;All</string>
+   </property>
+   <property name="shortcut" >
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actReadSelected" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/status/images/tango-icon.theme-0.8.1/scalable/status/audio-volume-medium.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Read &amp;Selected</string>
+   </property>
+   <property name="shortcut" >
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actStopReading" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/status/images/tango-icon.theme-0.8.1/scalable/status/audio-volume-muted.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Stop reading</string>
+   </property>
+   <property name="shortcut" >
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actUndo" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-undo.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Undo</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actRedo" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/edit-redo.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>&amp;Redo</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="qenix.qrc" />
+ </resources>
+ <connections/>
+</ui>
