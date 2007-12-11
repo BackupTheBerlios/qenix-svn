@@ -76,6 +76,8 @@ private slots:
     void copy();
     void paste();
     void about();
+    void undo();
+    void redo();
     //void find();
     //void findNext();
     void quickReplace();
@@ -121,7 +123,7 @@ private:
 
     QString lastFound;
     //QSignalMapper *windowMapper;
-
+    QFont currentFont;
 
 // read/dont read actions
     QAction *rRoundBracketsAct;    // ()

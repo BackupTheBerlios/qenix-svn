@@ -65,7 +65,9 @@ void TabWidget::newDoc()
 CodeEdit *TabWidget::newTab()
 {
    CodeEdit *ce = new CodeEdit(this);
+   ce->editor()->document()->setFont(lastFont);
    addTab(ce->editor(), QString("Dokument"));
+   setCurrentWidget(ce->editor());
    list << ce;
    return ce;
 }
@@ -135,4 +137,13 @@ QEditor *TabWidget::currentWidget()
 {
   for (int i = 0; i < list.count(); i++) if (list[i]->editor() == QTabWidget::currentWidget()) return list[i]->editor();
   return 0;
+}
+
+void TabWidget::setFont(QFont font)
+{
+  lastFont = font;
+  for (int i = 0; i < list.count(); i++)
+  {
+    list[i]->editor()->document()->setFont(font);
+  }
 }

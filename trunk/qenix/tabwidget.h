@@ -35,10 +35,12 @@ CodeEdit *newTab();
 CodeEdit *newTab(const QString& file);
 void deleteTab(int index);
 QEditor *currentWidget();
+void setFont(QFont font);
 
 private:
 void createActions();
 void createToolBars();
+
 
 QToolBar *leftToolBar;
 QToolBar *rightToolBar;
@@ -48,9 +50,13 @@ QAction *deleteTabAct;
 
 QList <QCodeEdit*> list;
 
+QFont lastFont;
+
 public slots:
 void newDoc();
 void deleteCurrentTab();
+
+
 };
 
 #endif

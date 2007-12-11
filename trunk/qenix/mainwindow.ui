@@ -112,6 +112,9 @@
    <addaction name="actPaste" />
    <addaction name="actQuickReplace" />
    <addaction name="separator" />
+   <addaction name="actUnident" />
+   <addaction name="actIdent" />
+   <addaction name="separator" />
    <addaction name="actReadAll" />
    <addaction name="actReadSelected" />
    <addaction name="actStopReading" />
@@ -126,6 +129,9 @@
    <property name="shortcut" >
     <string>Ctrl+N</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
   </action>
   <action name="actOpen" >
    <property name="icon" >
@@ -133,6 +139,12 @@
    </property>
    <property name="text" >
     <string>&amp;Open</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+O</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WindowShortcut</enum>
    </property>
   </action>
   <action name="actSave" >
@@ -143,7 +155,10 @@
     <string>&amp;Save</string>
    </property>
    <property name="shortcut" >
-    <string>Ctrl+O</string>
+    <string>Ctrl+S</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
    </property>
   </action>
   <action name="actSaveAs" >
@@ -152,6 +167,9 @@
    </property>
    <property name="text" >
     <string>Save As...</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
    </property>
   </action>
   <action name="actSwitchLD" >
@@ -183,6 +201,9 @@
    <property name="shortcut" >
     <string>Ctrl+X</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
   </action>
   <action name="actCopy" >
    <property name="icon" >
@@ -193,6 +214,9 @@
    </property>
    <property name="shortcut" >
     <string>Ctrl+C</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
    </property>
   </action>
   <action name="actPaste" >
@@ -205,6 +229,9 @@
    <property name="shortcut" >
     <string>Ctrl+V</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
   </action>
   <action name="actQuickReplace" >
    <property name="icon" >
@@ -213,6 +240,9 @@
    <property name="text" >
     <string>Quick replace</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
   </action>
   <action name="actFind" >
    <property name="icon" >
@@ -220,6 +250,9 @@
    </property>
    <property name="text" >
     <string>&amp;Find...</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
    </property>
   </action>
   <action name="actFindNext" >
@@ -268,6 +301,9 @@
    <property name="shortcut" >
     <string>F4</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WindowShortcut</enum>
+   </property>
   </action>
   <action name="actReadSelected" >
    <property name="icon" >
@@ -278,6 +314,9 @@
    </property>
    <property name="shortcut" >
     <string>F5</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WindowShortcut</enum>
    </property>
   </action>
   <action name="actStopReading" >
@@ -290,6 +329,9 @@
    <property name="shortcut" >
     <string>F6</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WindowShortcut</enum>
+   </property>
   </action>
   <action name="actUndo" >
    <property name="icon" >
@@ -301,6 +343,9 @@
    <property name="shortcut" >
     <string>Ctrl+Z</string>
    </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
   </action>
   <action name="actRedo" >
    <property name="icon" >
@@ -311,6 +356,31 @@
    </property>
    <property name="shortcut" >
     <string>Ctrl+Shift+Z</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actUnident" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/format-indent-less.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Unident</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actIdent" >
+   <property name="icon" >
+    <iconset resource="qenix.qrc" >:/actions/images/tango-icon.theme-0.8.1/scalable/actions/format-indent-more.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Ident</string>
+   </property>
+   <property name="shortcut" >
+    <string>Ctrl+Shift+I</string>
    </property>
   </action>
  </widget>
