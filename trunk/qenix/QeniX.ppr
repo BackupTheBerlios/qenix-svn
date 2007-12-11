@@ -50,14 +50,14 @@ QeniX
 			strlib.cpp
 			dictionary.cpp
 [Open project files]
-0=mainwindow.h
+0=Novy1.txt
 1=mainwindow.cpp
 [Selected Project Files]
 Main=
 Selected=mainwindow.cpp
-[mainwindow.h]
-TopLine=70
-Caret=1,94
+[Novy1.txt]
+TopLine=1
+Caret=1,1
 [mainwindow.cpp]
-TopLine=148
-Caret=3,174
+TopLine=126
+Caret=5,153
