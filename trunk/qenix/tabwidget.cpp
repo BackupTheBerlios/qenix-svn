@@ -45,7 +45,7 @@ void TabWidget::createToolBars()
 
 void TabWidget::createActions()
 {
-  newTabAct = new QAction(QIcon(":/images/new.png"), tr("&New tab"), this);
+  newTabAct = new QAction(QIcon(":/actions/tab-new.svg"), tr("&New tab"), this);
   newTabAct->setShortcut(tr("Ctrl+N"));
   newTabAct->setStatusTip(tr("Open a new tab"));
   connect(newTabAct, SIGNAL(triggered()), this, SLOT(newDoc()));

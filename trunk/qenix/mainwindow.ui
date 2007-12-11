@@ -12,7 +12,40 @@
   <property name="windowTitle" >
    <string>QENIX</string>
   </property>
-  <widget class="QWidget" name="centralwidget" />
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QDockWidget" name="dockWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>70</x>
+      <y>50</y>
+      <width>211</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="dockWidgetContents" >
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QTabWidget" name="tabWidget" >
+        <property name="currentIndex" >
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabFileExplorer" >
+         <attribute name="title" >
+          <string>Tab 1</string>
+         </attribute>
+         <layout class="QGridLayout" />
+        </widget>
+        <widget class="QWidget" name="tabProjectExplorer" >
+         <attribute name="title" >
+          <string>Tab 2</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar" >
    <property name="geometry" >
     <rect>
@@ -28,6 +61,7 @@
     </property>
     <addaction name="actNewDoc" />
     <addaction name="actOpen" />
+    <addaction name="separator" />
     <addaction name="actSave" />
     <addaction name="actSaveAs" />
     <addaction name="separator" />
@@ -46,6 +80,9 @@
     <addaction name="actCopy" />
     <addaction name="actPaste" />
     <addaction name="actQuickReplace" />
+    <addaction name="separator" />
+    <addaction name="actIdent" />
+    <addaction name="actUnident" />
     <addaction name="separator" />
     <addaction name="actFind" />
     <addaction name="actFindNext" />
@@ -240,8 +277,11 @@
    <property name="text" >
     <string>Quick replace</string>
    </property>
+   <property name="shortcut" >
+    <string>F2</string>
+   </property>
    <property name="shortcutContext" >
-    <enum>Qt::WidgetShortcut</enum>
+    <enum>Qt::WindowShortcut</enum>
    </property>
   </action>
   <action name="actFind" >
@@ -251,13 +291,22 @@
    <property name="text" >
     <string>&amp;Find...</string>
    </property>
+   <property name="shortcut" >
+    <string>Ctrl+F</string>
+   </property>
    <property name="shortcutContext" >
-    <enum>Qt::WidgetShortcut</enum>
+    <enum>Qt::WindowShortcut</enum>
    </property>
   </action>
   <action name="actFindNext" >
    <property name="text" >
     <string>Find &amp;next...</string>
+   </property>
+   <property name="shortcut" >
+    <string>F3</string>
+   </property>
+   <property name="shortcutContext" >
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actServer" >
