@@ -11,11 +11,12 @@ INCLUDEPATH += libqce libqce/document libqce/language libqce/widgets libqce/qnfa
 
 #Everything will be build statically
 #CONFIG += static release opengl
-CONFIG += debug
-DEFINE += Q_GL_EDITOR
+#CONFIG += release
+CONFIG += static release opengl
+#DEFINES += Q_GL_EDITOR
 
 #QCodeEdit uses xml
-QT += xml
+QT += xml opengl
 
 UI_DIR = .build
 MOC_DIR = .build

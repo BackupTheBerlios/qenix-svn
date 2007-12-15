@@ -108,13 +108,16 @@ private slots:
     void rSeparateNumbers(); //Separate numbers - exapmple: "4236" => "4 2 3 6"
     void rLowerCase();
   
+    void dockFilesClicked(QModelIndex index);
 public slots:
     
     
 private:
     void createActions();
     void createMenus();
+    void createToolBars();
     void createStatusBar();
+    void fileBrowserClicked();
     
     int loadSettings();
     int writeSettings();
@@ -139,7 +142,11 @@ private:
     QAction *toLowerCAct;
     QAction *ttscpSettingsAct;
     QAction *ttscpVoiceAct;
-
+    
+    QTreeView *TreeFiles;
+    QDirModel *DirModel;
+    QDockWidget *DockFiles;
+    
     textFormater tf;
 
 };
