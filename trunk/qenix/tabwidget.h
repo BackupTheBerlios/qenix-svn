@@ -32,7 +32,7 @@ Q_OBJECT
 public:
 TabWidget(QWidget *parent = 0);
 CodeEdit *newTab();
-CodeEdit *newTab(const QString& file);
+CodeEdit *newTab(const QString& filename);
 void deleteTab(int index);
 QEditor *currentWidget();
 void setFont(QFont font);
@@ -55,6 +55,9 @@ QFont lastFont;
 public slots:
 void newDoc();
 void deleteCurrentTab();
+void setLineUnix();
+void setLineWindows();
+void setLineMac();
 
 
 };

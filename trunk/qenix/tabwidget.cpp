@@ -72,18 +72,48 @@ CodeEdit *TabWidget::newTab()
    return ce;
 }
 
-CodeEdit *TabWidget::newTab(const QString& file)
+CodeEdit *TabWidget::newTab(const QString& filename)
 {
-	if ( QFile::exists(file) )
+	if ( QFile::exists(filename) )
 	{
 		CodeEdit *ce = newTab();
-		ce->getLanguages()->setLanguage(ce->editor(), file);
-		ce->editor()->load(file);
+		ce->getLanguages()->setLanguage(ce->editor(), filename);
+		QString tabtext;
+    tabtext = filename;
+		//Linux
+    if (tabtext.contains(QString("/")))
+    {
+      int last = tabtext.lastIndexOf(QString("/"));
+      tabtext = tabtext.right(tabtext.size() - last - 1);
+    }
+    //Windows
+    if (tabtext.contains(QString("\\")))
+    {
+      int last = tabtext.lastIndexOf(QString("\\"));
+      tabtext = tabtext.right(tabtext.size() - last - 1);
+    }
+     
+		setTabText(currentIndex(), tabtext);
+		ce->editor()->load(filename);
 		return ce;
 	}
 	return 0;
 }
 
+void TabWidget::setLineUnix()
+{
+currentWidget()->document()->setLineEnding(QDocument::Unix);
+}
+
+void TabWidget::setLineWindows()
+{
+currentWidget()->document()->setLineEnding(QDocument::Windows);
+}
+
+void TabWidget::setLineMac()
+{
+currentWidget()->document()->setLineEnding(QDocument::Mac);
+}
 
 
 void TabWidget::deleteTab(int index)

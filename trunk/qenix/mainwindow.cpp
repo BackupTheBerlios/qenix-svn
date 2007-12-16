@@ -228,6 +228,11 @@ void MainWindow::createActions()
     connect(actUndo, SIGNAL(triggered()), this, SLOT(undo()));
     connect(actRedo, SIGNAL(triggered()), this, SLOT(redo()));
     connect(actQuickReplace, SIGNAL(triggered()), this, SLOT(quickReplace()));
+    
+    connect(actUnix, SIGNAL(triggered()), Tabw, SLOT(setLineUnix()));
+    connect(actWindows, SIGNAL(triggered()), Tabw, SLOT(setLineWindows()));
+    connect(actMac, SIGNAL(triggered()), Tabw, SLOT(setLineMac()));
+    
     //connect(actUnident, SIGNAL(triggered()), this, SLOT(unident()));
     //connect(actIdene, SIGNAL(triggered()), this, SLOT(ident()));
     

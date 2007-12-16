@@ -66,6 +66,10 @@
      <string>&amp;Format</string>
     </property>
     <addaction name="actFont" />
+    <addaction name="separator" />
+    <addaction name="actUnix" />
+    <addaction name="actWindows" />
+    <addaction name="actMac" />
    </widget>
    <widget class="QMenu" name="mnuRead" >
     <property name="title" >
@@ -397,6 +401,21 @@
    </property>
    <property name="shortcut" >
     <string>Ctrl+Shift+I</string>
+   </property>
+  </action>
+  <action name="actWindows" >
+   <property name="text" >
+    <string>&amp;Windows (CR+LF)</string>
+   </property>
+  </action>
+  <action name="actUnix" >
+   <property name="text" >
+    <string>&amp;UNIX (LF)</string>
+   </property>
+  </action>
+  <action name="actMac" >
+   <property name="text" >
+    <string>&amp;MAC (CR)</string>
    </property>
   </action>
  </widget>
