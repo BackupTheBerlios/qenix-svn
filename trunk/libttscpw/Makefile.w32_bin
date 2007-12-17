@@ -1,9 +1,0 @@
-ttscp: main.o ttscpw.o rawaudio.o
-	g++ -o ttscp main.o ttscpw.o rawaudio.o -lws2_32 -lwinmm
-main.o: main.cpp
-	g++ -c main.cpp
-ttscpw.o: ttscpw.cpp
-	g++ -c ttscpw.cpp		
-rawaudio.o: rawaudio.cpp
-	g++ -c rawaudio.cpp
-		

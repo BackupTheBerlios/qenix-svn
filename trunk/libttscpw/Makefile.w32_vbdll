@@ -1,9 +1,0 @@
-ttscp: vbdllexport.o ttscpw.o rawaudio.o
-	g++ -shared -Wl,--add-stdcall-alias -Wl,--output-def,ttscpw.def,--out-implib,libttscpw.a -o ttscpw.dll vbdllexport.o ttscpw.o rawaudio.o -lws2_32 -lwinmm
-	lib /machine:i386 /def:ttscpw.def
-vbdllexport.o: vbdllexport.cpp
-	g++ -c vbdllexport.cpp
-ttscpw.o: ttscpw.cpp
-	g++ -c ttscpw.cpp		
-rawaudio.o: rawaudio.cpp
-	g++ -c rawaudio.cpp

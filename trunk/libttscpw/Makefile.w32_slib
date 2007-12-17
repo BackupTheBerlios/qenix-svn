@@ -1,7 +1,0 @@
-ttscp: ttscpw.o rawaudio.o
-	ar rcs libttscpw.a ttscpw.o rawaudio.o
-ttscpw.o: ttscpw.cpp
-	g++ -c ttscpw.cpp		
-rawaudio.o: rawaudio.cpp
-	g++ -c rawaudio.cpp
-		

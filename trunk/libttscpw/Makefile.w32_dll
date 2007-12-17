@@ -1,7 +1,0 @@
-ttscp: ttscpw.o ttscpw.o rawaudio.o
-	g++ -shared -enable-realtime-pseudo-reloc --no-undefined -Wl,--out-implib,libttscpw.a -o ttscpw.dll ttscpw.o rawaudio.o -lws2_32 -lwinmm
-ttscpw.o: ttscpw.cpp
-	g++ -c ttscpw.cpp		
-rawaudio.o: rawaudio.cpp
-	g++ -c rawaudio.cpp
-		

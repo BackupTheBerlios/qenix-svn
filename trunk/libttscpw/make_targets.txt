@@ -1,0 +1,6 @@
+linuxbin
+linuxstaticlib
+linuxshared
+winbin
+dll
+vbdll
