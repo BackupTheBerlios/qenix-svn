@@ -32,3 +32,10 @@ ttscpw.o.fpic: ttscpw.cpp
 	g++ -fPIC -c ttscpw.cpp		
 oss.o.fpic: oss.cpp
 	g++ -fPIC -c oss.cpp
+
+clean:
+	del *.o
+	del libttscpw.a
+	del ttscpw.lib
+	del ttscpw.exp
+	del ttscpw.dll

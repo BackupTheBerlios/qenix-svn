@@ -55,19 +55,19 @@ __declspec (dllexport) int __stdcall ttscpw_setVoice (LPSTR voice)
   return tts.setVoice(voice);
 }
 
-__declspec (dllexport) int __stdcall ttscpw_setInit_f (int f)
+__declspec (dllexport) int __stdcall ttscpw_setInit_f (unsigned long f)
 {
-  return tts.setInit_f(f);
+  return tts.setInit_f((int)f);
 }
 
-__declspec (dllexport) int __stdcall ttscpw_setInit_i (int i)
+__declspec (dllexport) int __stdcall ttscpw_setInit_i (unsigned long i)
 {
-  return tts.setInit_i(i);
+  return tts.setInit_i((int)i);
 }
 
-__declspec (dllexport) int __stdcall ttscpw_setInit_t (int t)
+__declspec (dllexport) int __stdcall ttscpw_setInit_t (unsigned long t)
 {
-  return tts.setInit_t(t);
+  return tts.setInit_t((int)t);
 }
 // Getters
 __declspec (dllexport) int __stdcall ttscpw_getInit_f (int *f)
